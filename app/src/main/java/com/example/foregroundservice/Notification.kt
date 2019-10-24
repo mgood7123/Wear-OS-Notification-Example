@@ -101,8 +101,8 @@ class Notification {
         notificationManager = NotificationManagerCompat.from(context)
     }
     // notificationId is a unique int for each notification that you must define
-    fun show() {
-        notificationManager.notify(1, notificationBuilder.build())
+    fun show(id: Int) {
+        notificationManager.notify(id, notificationBuilder.build())
     }
     /**
      * Create the NotificationChannel, but only on API 26+ because
@@ -120,7 +120,7 @@ class Notification {
         notificationManager.createNotificationChannel(channel)
         NotificationCompat.Builder(context, channelId)
     } else {
-        Log.wtf("NotificationCreator", "could not create notification channel")
+        Log.wtf("NotificationCreator", "could not create notification channel, API 25 and below do not support NotificationChannel class")
         null
     }
 }

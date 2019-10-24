@@ -7,6 +7,6 @@ class MainActivity : WearableActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Notification(this, applicationContext, "Notification", "Main Activity").show()
+        Notification(this, applicationContext, "Notification", "Main Activity").show(1)
     }
 }

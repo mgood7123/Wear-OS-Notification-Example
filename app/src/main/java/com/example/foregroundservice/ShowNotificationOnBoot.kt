@@ -10,6 +10,6 @@ class MyBootCompletedReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         Log.e("NotificationCreator", "ON BOOT RECIEVED")
-        Notification(context, "Notification", "On Boot: Time since boot").show()
+        Notification(context, "Notification", "On Boot: Time since boot").show(0)
     }
 }

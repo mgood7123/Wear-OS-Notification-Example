@@ -5,4 +5,5 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="service_description">test service for Foreground Service app</string>
 </resources>
